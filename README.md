@@ -1,40 +1,55 @@
-LAPD Crime Prediction and Visualization App
+# LAPD Crime Prediction and Visualization App
+
 This project leverages machine learning to predict crime types using LAPD crime data and visualizes crime hotspots using interactive maps. It features a Random Forest Classifier hosted as a Flask API, with an interactive frontend for user input and a dynamic heatmap for visualization.
 
-Table of Contents
-Overview
-Features
-Installation
-Usage
-API Endpoint
-Visualization
-File Structure
-Future Enhancements
-License
-Overview
-Prediction Model: A Random Forest Classifier trained on LAPD crime data.
-Frontend: A user-friendly interface built with HTML, CSS, and JavaScript.
-Visualization: Heatmap showing crime hotspots using folium.
-Deployment: Local Flask server.
-Features
-Machine Learning Prediction:
+---
 
-Predict crime categories using 20 input features.
-Trained with optimized preprocessing and feature selection.
-API Integration:
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [API Endpoint](#api-endpoint)
+6. [Visualization](#visualization)
+7. [File Structure](#file-structure)
+8. [Future Enhancements](#future-enhancements)
+9. [License](#license)
 
-Hosted via a Flask backend API.
-Easily testable with JSON input and output.
-Frontend:
+---
 
-Interactive user interface for entering feature values.
-Displays predictions and probabilities.
-Heatmap Visualization:
+## Overview
 
-Generates crime heatmaps using folium.
-Visualizes crime-prone areas using location data.
-Installation
-1. Clone the Repository:
+- **Prediction Model**: A Random Forest Classifier trained on LAPD crime data.
+- **Frontend**: A user-friendly interface built with HTML, CSS, and JavaScript.
+- **Visualization**: Heatmap showing crime hotspots using `folium`.
+- **Deployment**: Local Flask server.
+
+---
+
+## Features
+
+1. **Machine Learning Prediction**:
+   - Predict crime categories using 20 input features.
+   - Trained with optimized preprocessing and feature selection.
+
+2. **API Integration**:
+   - Hosted via a Flask backend API.
+   - Easily testable with JSON input and output.
+
+3. **Frontend**:
+   - Interactive user interface for entering feature values.
+   - Displays predictions and probabilities.
+
+4. **Heatmap Visualization**:
+   - Generates crime heatmaps using `folium`.
+   - Visualizes crime-prone areas using location data.
+
+---
+
+## Installation
+
+### 1. Clone the Repository:
+```bash
 git clone https://github.com/your-username/lapd-crime-prediction.git
 cd lapd-crime-prediction
 
