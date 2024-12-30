@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a2a6c, #fdbb2d); /* Bluish-Golden gradient */
+    color: #333;
+}
+
+header {
+    background-color: transparent; /* Keep header transparent */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+header .logo img {
+    height: 150px; /* Increase the size of the logo */
+    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-section {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    resize: none;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.hidden {
+    display: none;
+}
+
+#output-section {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+footer {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

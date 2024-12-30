@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAPD Crime Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/image.png" alt="LAPD Logo">
+            <h1>LAPD Crime Prediction</h1>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Predict Crime Category</h2>
+            <form id="predictForm">
+                <textarea id="inputData" placeholder="Enter 20 comma-separated feature values" rows="5"></textarea>
+                <button type="submit">Predict</button>
+            </form>
+        </section>
+        <section id="output-section" class="hidden">
+            <h3>Prediction Result</h3>
+            <pre id="output"></pre>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 LAPD Crime Prediction System</p>
+    </footer>
+    <script>
+        document.getElementById("predictForm").onsubmit = async (event) => {
+            event.preventDefault();
+            const inputData = document.getElementById("inputData").value.split(",").map(Number);
+            const response = await fetch("/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ data: inputData }),
+            });
+            const result = await response.json();
+            document.getElementById("output").innerText = JSON.stringify(result, null, 2);
+            document.getElementById("output-section").classList.remove("hidden");
+        };
+    </script>
+</body>
+</html>
